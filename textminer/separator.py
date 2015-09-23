@@ -2,7 +2,10 @@ import re
 import textminer.validator as v
 
 def words(input):
-    return v.words(input)
+    if v.words(input):
+        return input.split(' ')
+    else:
+        return None
 
 def phone_number(input):
     if v.phone_number(input):
